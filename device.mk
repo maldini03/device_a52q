@@ -31,3 +31,7 @@ PRODUCT_PACKAGES += \
 # Audio
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/audio/mixer_paths.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths.xml
+
+# Remove unwanted packages
+PRODUCT_PACKAGES += \
+    RemovePackages
