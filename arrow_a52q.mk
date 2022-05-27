@@ -23,8 +23,8 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 # Inherit from the common Open Source product configuration
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 
-# Inherit some common Lineage stuff
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common ArrowOS stuff
+$(call inherit-product, vendor/arrow/config/common.mk)
 
 # Enable updating of APEXes
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
@@ -36,7 +36,7 @@ TARGET_SCREEN_HEIGHT := 2400
 TARGET_SCREEN_WIDTH := 1080
 
 ## Device identifier. This must come after all inclusions
-PRODUCT_NAME := lineage_a52q
+PRODUCT_NAME := arrow_a52q
 PRODUCT_DEVICE := a52q
 PRODUCT_BRAND := samsung
 PRODUCT_MODEL := SM-A525F
@@ -49,3 +49,8 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     PRIVATE_BUILD_DESC="a52qnsxx-user 11 RP1A.200720.012 A525FXXU2AUF3 release-keys"
 
 BUILD_FINGERPRINT := samsung/a52qnsxx/a52q:11/RP1A.200720.012/A525FXXU2AUF3:user/release-keys
+
+TARGET_GAPPS_ARCH := arm64
+IS_PHONE := true
+DEVICE_MAINTAINER := travarilo
+PRODUCT_CHARACTERISTICS := nosdcard

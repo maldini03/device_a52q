@@ -14,9 +14,9 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_a52q.mk
+    $(LOCAL_DIR)/arrow_a52q.mk
 
 COMMON_LUNCH_CHOICES := \
-    lineage_a52q-userdebug \
-    lineage_a52q-user \
-    lineage_a52q-eng
+    arrow_a52q-userdebug \
+    arrow_a52q-user \
+    arrow_a52q-eng
