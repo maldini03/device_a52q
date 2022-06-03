@@ -23,8 +23,8 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 # Inherit from the common Open Source product configuration
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 
-# Inherit some common Lineage stuff
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common Evolution-X stuff
+$(call inherit-product, vendor/evolution/config/common_full_phone.mk)
 
 # Enable updating of APEXes
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
@@ -34,9 +34,13 @@ TARGET_BOOTANIMATION_PRELOAD := true
 TARGET_BOOTANIMATION_TEXTURE_CACHE := true
 TARGET_SCREEN_HEIGHT := 2400
 TARGET_SCREEN_WIDTH := 1080
+TARGET_BOOT_ANIMATION_RES := 1080
+
+TARGET_SUPPORTS_QUICK_TAP := true
+PRODUCT_CHARACTERISTICS := nosdcard
 
 ## Device identifier. This must come after all inclusions
-PRODUCT_NAME := lineage_a52q
+PRODUCT_NAME := evolution_a52q
 PRODUCT_DEVICE := a52q
 PRODUCT_BRAND := samsung
 PRODUCT_MODEL := SM-A525F
